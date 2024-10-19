@@ -4,15 +4,15 @@ const axios = require("axios");
 const qs = require("qs");
 
 const config = {
-  channelAccessToken: "xxx", // add your channel access token
-  channelSecret: "xxx", // add your channel secret
+  channelAccessToken: "ViP8cMhCXpPD8uvNm7A1ZAoo9lxG1p6OyRPreJGwnntxM2eMnuoUAxi1MU/aPb51cR1Wn9mHFT9etPDzzip2+VAKJYUPeUimJFi2MLGjm0sXEV3Fiv/AHKa+qLC0kLheQkFnQK5TzZ0pVjvlKJ+DJgdB04t89/1O/w1cDnyilFU=", // add your channel access token
+  channelSecret: "9cbcb8006d2f2766321ddddf98ab32d7", // add your channel secret
 };
 
-const APPS_SCRIPT_URL = "xxx"; // add your google app script url
+const APPS_SCRIPT_URL = "https://script.google.com/d/19gDH7l4xCMz_G4TRaPDaVr8-beI6rmJQ06U-VTydHv3DKKO9Fhxbq-ka/edit?usp=sharing"; // add your google app script url
 
 const app = express();
 
-app.get("/api", (req, res) => res.send("Hello World!"));
+app.get("/api", (req, res) => res.send("รายงาน คลังสินค้าบิวตี้คลับ"));
 
 app.post("/api/webhook", line.middleware(config), (req, res) => {
   Promise.all(req.body.events.map(handleEvent))
@@ -54,7 +54,7 @@ async function handleEvent(event) {
 
     return client.replyMessage(event.replyToken, {
       type: "text",
-      text: "กรุณาลองใหม่อีกครั้งค่ะ",
+      text: "กรุณาลองใหม่อีกครั้ง",
     });
   }
 }
